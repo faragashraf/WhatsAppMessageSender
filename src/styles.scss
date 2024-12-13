@@ -1,0 +1,190 @@
+/* You can add global styles to this file, and also import other style files */
+/* PrimeNG Theme */
+@import "~primeng/resources/themes/saga-blue/theme.css";
+/* PrimeNG Core CSS */
+@import "~primeng/resources/primeng.min.css";
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+:host {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+}
+
+/* Ensure the content area grows to push the footer to the bottom */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    margin: 0 auto;
+    /* Center the container horizontally */
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 100vw;
+    /* Limit max width for large screens */
+    height: auto;
+    background-color: #ffffff;
+    /* Optional background color */
+    padding: 0 3rem;
+    /* Optional padding */
+    border: 1px solid #ffffff;
+    /* Optional border */
+    box-sizing: border-box;
+    /* Ensures padding and border are included in the width */
+    min-height: 80vh;
+}
+
+.container-main {
+    margin: auto;
+    padding: 1rem;
+    border-radius: 10px !important;
+    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.342) !important;
+    /* Adding shadow */
+    min-height: 80vh;
+    direction: rtl;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    // flex-direction: row-reverse;
+}
+
+.widget {
+    padding: 1rem;
+    margin: .5rem;
+    border-radius: 10px !important;
+    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.342) !important;
+    /* Adding shadow */
+    min-height: auto;
+}
+
+.shadow-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 8px 5px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.1s ease;
+    outline: none;
+    /* Removes default focus outline */
+}
+
+.shadow-button:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.shadow-button:active {
+    transform: scale(0.90);
+    /* Makes the button smaller on click */
+}
+
+.shadow-button:disabled {
+    background-color: #b0c4de;
+    /* Dimmed color */
+    color: #666666;
+    /* Dimmed text color */
+    cursor: not-allowed;
+    /* Change cursor to not-allowed */
+    box-shadow: none;
+    /* Remove shadow */
+    opacity: 0.6;
+    /* Add transparency */
+}
+
+/* Footer styling */
+.app-footer {
+    background-color: #333;
+    color: #fff;
+    padding: .15rem;
+    // position: sticky;
+    bottom: 0;
+    width: 100%;
+
+    /* Fixed position to keep it at the top */
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    /* Ensure it stays on top of other elements */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+    text-align: left;
+    margin: auto;
+}
+
+.support-info {
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.support-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.support-info a:hover {
+    text-decoration: underline;
+}
+
+
+// @media (max-width: 768px) {
+//   .content {
+//     padding: 0 1rem; /* Reduce padding on smaller screens */
+//   }
+
+//   .footer-content {
+//     flex-direction: column;
+//     align-items: center;
+//     text-align: center;
+//   }
+
+//   .footer-column {
+//     margin-bottom: 1rem; /* Add spacing between columns */
+//   }
+
+//   .widget {
+//     margin: 1rem 0; /* Stack widgets vertically */
+//   }
+// }
+
+// @media (max-width: 480px) {
+//   .content {
+//     padding: 0 0.5rem; /* Further reduce padding on very small screens */
+//   }
+
+//   .footer-content {
+//     padding: 0 10px; /* Adjust footer padding */
+//   }
+// }

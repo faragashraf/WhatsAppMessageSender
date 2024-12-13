@@ -1,0 +1,71 @@
+<div class="content">
+  <div class="container-main">
+    <div class="row">
+      <div class="widget">
+        <div class="p-field">
+          <div class="p-formgroup-inline">
+            <div class="p-field-radiobutton">
+              <input name="whatsappMode" value="web" [(ngModel)]="whatsappMode" label="Web" type="radio"
+                (change)="onWhatsAppModeChange($event)">
+              <span>Web</span>
+            </div>
+            <div class="p-field-radiobutton">
+              <input name="whatsappMode" value="api" [(ngModel)]="whatsappMode" label="API" type="radio"
+                (change)="onWhatsAppModeChange($event)">
+              <span>Application</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-field">
+          <label for="numbers">أرقام التليفون</label>
+          <textarea id="numbers" type="text" [(ngModel)]="numbers" pInputText
+            placeholder="Enter comma-separated phone numbers Example: 201XXXXXXXXX,201XXXXXXXXX" class="form-control"
+            rows="10" cols="122"></textarea>
+        </div>
+
+        <div class="p-field">
+          <label for="message">نص الرسالة</label>
+          <textarea type="text" id="message" [(ngModel)]="multilineString" class="form-control" rows="15" cols="122"
+            placeholder="Enter your message here" pInputText></textarea>
+        </div>
+        <div class="p-field">
+          <label for="timeSelect">اختار سرعة الإرسال</label>
+          <p-dropdown id="timeSelect" [options]="timeOptions" [(ngModel)]="selectedTime" optionLabel="label"
+            optionValue="value" placeholder="Select Time Interval" (onChange)="onTimeChange($event)">
+          </p-dropdown>
+        </div>
+        <div class="p-formgroup-inline">
+          <button pButton type="button" label="Generate Messages" (click)="onSendMessage()"
+            [disabled]="multilineString.length==0 || numbers.length==0"></button>
+
+          <button pButton type="button" [label]="buttonLable" (click)="openWhatsApp()"
+            [disabled]="selectedTime== undefined"></button>
+        </div>
+      </div>
+      <div class="widget" *ngIf="urls.length > 0">
+        <div class="p-field">
+          <label>Click to Send Messages</label>
+          <div *ngFor="let item of urls" class="p-mb-2">
+            <button pButton type="button" [label]="'Send to ' + item.phoneNumber" class="btn btn-success"
+              (click)="onClickUrl(item.url)"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="app-footer">
+  <div class="footer-content">
+    <div style="text-align: right;">
+      <!-- <img src="assets/imges/Egyptpost.png" width="100px" height="70px" alt="Image"> -->
+    </div>
+    <div class="footer-column support-info">
+      © {{ currentYear }} TechStation. All rights reserved.
+    </div>
+    <div class="footer-column support-info">
+      <p>Support: <a href="mailto:a.farag@techstation.com.eg">a.farag@techstation.com.eg</a></p>
+      <!-- <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p> -->
+      <!-- <p><a href="/support">Visit our support page</a></p> -->
+    </div>
+  </div>
+</footer>

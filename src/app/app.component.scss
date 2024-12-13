@@ -1,0 +1,98 @@
+/* app.component.css */
+
+  .p-field {
+    margin-bottom: 1rem;
+  }
+  
+  .p-formgroup-inline {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row;
+  }
+  .p-field-radiobutton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between the radio button and its label */
+  }
+  
+  .p-field-radiobutton input[type='radio'] {
+    margin: 0; /* Removes default browser margin */
+  }
+  
+  .p-field-radiobutton label {
+    margin: 0;
+    cursor: pointer; /* Makes the label clickable */
+    font-size: 14px; /* Adjusts the label font size */
+  }
+
+  button {
+    margin-top: 1rem;
+    width: 90%;
+  }
+  /* app.component.css */
+.p-field {
+    margin-bottom: 1rem;
+  }
+  
+  button {
+    margin-top: 1rem;
+  }
+  /* ticket-form.component.css */
+form {
+    margin-bottom: 15px;
+    width: 95%;
+  }
+  
+  
+  label {
+    padding: 0  .5rem 0 .5rem;
+    display: flex ;
+    width: 23rem;
+    min-width: 23rem;
+    color: black;
+    font-size:x-large;
+    font-family: 'Times New Roman', Times, serif;
+    // margin-left: .5rem;
+  }
+  .radioButton{
+    display: flex;
+    align-items: center;
+  }
+  
+  input,
+  textarea,
+  button {
+    margin: 1rem;
+  }
+  
+  .disabled-div {
+    pointer-events: none;
+    opacity: 0.5;
+    /* Make the element look disabled */
+  }
+  
+  .alert-danger {
+    color: red;
+  }
+  
+  .form-array {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 80%;
+  }
+  
+  .form-array input {
+    margin: 5px;
+    /* Adds some space between the inputs */
+    box-sizing: border-box;
+    /* Ensures padding and border are included in the element's total width and height */
+    width: 27.25rem;
+  }
+  
+  .form-group {
+    margin: .5rem;
+    margin-bottom: 2rem;
+    min-width: 30.5rem;
+  }
